@@ -1,4 +1,4 @@
-var posts=["2023/10/31/hello-world/","2023/10/31/Hello-我是lovewold少个r/","2023/10/31/leetcode刷题日记做菜顺序/","2023/11/02/grilfrind/","2023/11/06/0基础两小时搭建个人网站/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};var friend_link_list=[{"name":"小瞳","link":"http://101.37.26.200/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","recommend":true}];
+var posts=["2023/11/06/0基础两小时搭建个人网站/","2023/10/31/Hello-我是lovewold少个r/","2023/11/02/grilfrind/","2023/10/31/hello-world/","2023/10/31/leetcode刷题日记做菜顺序/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};var friend_link_list=[{"name":"小瞳","link":"http://101.37.26.200/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","recommend":true}];
     var refreshNum = 1;
     function friendChainRandomTransmission() {
       const randomIndex = Math.floor(Math.random() * friend_link_list.length);
