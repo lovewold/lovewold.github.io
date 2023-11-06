@@ -1,0 +1,710 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Lovewold少个r | Lovewold少个r</title><meta name="author" content="lovewold少个r,1493059862@qq.com"><meta name="copyright" content="lovewold少个r"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Lovewold少个r"><meta name="application-name" content="Lovewold少个r"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Lovewold少个r"><meta property="og:url" content="https://www.lovewold.top/2023/11/06/0基础两小时搭建个人网站/index.html"><meta property="og:site_name" content="Lovewold少个r"><meta property="og:description" content="作者主页📚lovewold少个r博客主页   ⚠️本文重点：0基础2小时搭建个人网站 👉***【C-C++入门系列专栏】*：博客文章专栏传送门 😄***每日一言*：宁静是一片强大而治愈的神奇海洋！   目录前言 第一步 环境配置 服务器配置 第二步 使用Linux服务器 远程连接服务器 第"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://www.lovewold.top/img/default_cover.jpg"><meta property="article:author" content="lovewold少个r"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://www.lovewold.top/img/default_cover.jpg"><meta name="description" content="作者主页📚lovewold少个r博客主页   ⚠️本文重点：0基础2小时搭建个人网站 👉***【C-C++入门系列专栏】*：博客文章专栏传送门 😄***每日一言*：宁静是一片强大而治愈的神奇海洋！   目录前言 第一步 环境配置 服务器配置 第二步 使用Linux服务器 远程连接服务器 第"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.lovewold.top/2023/11/06/0%E5%9F%BA%E7%A1%80%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: undefined,
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🔍 分享与热心帮助"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":50,"languages":{"author":"作者: lovewold少个r","link":"链接: ","source":"来源: Lovewold少个r","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Lovewold少个r',
+  title: 'Lovewold少个r',
+  postAI: '',
+  pageFillDescription: '作者主页, 目录, 前言, 第一步, , , 第二步, 使用Linux服务器, 远程连接服务器, 第三步(任务已经完成30%), 开始环境依赖下载运行, 安装Apache, 安装MySQL数据库（任务已经完成50%）, 第四步, 安装PHP环境, 下载环境, 第五步（任务已经完成80%）, 安装wordpress, wordpress是什么, 下载WordPress压缩包, 修改wp-config.php配置文件, 重启Apache服务（任务完成90%）, 第六步, 网站配置, 第七步（任务完成99%）, 后言作者主页少个博客主页本文重点基础小时搭建个人网站入门系列专栏博客文章专栏传送门每日一言宁静是一片强大而治愈的神奇海洋目录前言第一步环境配置服务器配置第二步使用服务器远程连接服务器第三步任务已经完成开始环境依赖下载运行安装安装数据库任务已经完成第四步安装环境下载环境第五步任务已经完成安装是什么下载压缩包修改配置文件重启服务任务完成第六步网站配置第七步任务完成总结前言对于很多小伙伴来讲都希望有一个自己的个人网站记录自己的生活亦或者创建自己的个人博客网站自己有一个网站能访问这本身就是一件特别酷的事情而本章我们会对与我们这个小项目的技术栈做一个大致的描述主要讲述搭建方法和解决一些常见的困难我们采用的计算方案是基于阿里云云服务器和系统下的快速部署对于一些专业性的描述大家有选择的观看不需要涉及很多困难操作只需要跟着一步步来就可以完成个人网站的搭建了阿里云也具有官方文档但是我会涉及一些零基础的知识解释大家一步步跟着来吧第一步环境配置服务器配置要搭建个人的博客网站就得先有一个云端的服务器而非本端的我们可以通过公网的地址就能访问到我们的网站云服务器是阿里云提供的性能卓越稳定可靠弹性扩展的级别云计算服务云服务器主要包含实例镜像块存储快照安全组网络等功能组件进入阿里云官网登陆认证领取阿里云服务器这里最近阿里云活动可以免费领取三个月的配额对于熟悉建站流程来讲已经完全够用了选择配置创建实例本教程以位操作系统为例如果您购买的服务器使用了其他版本的操作系统操作可能和本教程略有差异不推荐直接使用云市场操作系统自带的后期产生不好处理重置实例密码账号就密码为大小写数字和字符中的三种重置密码并重新启动配置安全组规则单击试用实例的选择安全组页签单击安全组操作列的配置规则在入方向添加需要放行的端口本教程中在安全组入方向放行默认端口默认端口和默认端口第二步使用服务器远程连接服务器密码为重置实例你创建的密码通过远程连接自定义密码登陆即可进行远程操作服务器是系统的服务器因此我们这里学习一下如下指令展示文件展示所有文件展示非隐藏文件清理屏幕进入目录目录名或者目录路径第三步任务已经完成开始环境依赖下载运行安装全名为是一个流行的开源服务器软件它用于在服务器上托管和提供页面和应用程序是由软件基金会开发和维护的被广泛用于上的网站和应用的部署执行命令安装及其扩展包如果回显信息显示则表示安装成功执行管理者权限是系统下的软件管理软件通过如下操作实现安装启动并设置开机自启动查看运行状态如果回显信息显示时表示已启动这个时候在本地电脑浏览器地址栏中输入你的公网测试服务是否安装成功如果显示如图所示的测试页面表示服务已安装成功服务器的公网可以从实例页面获取如下就代表成功了命令行点击后继续执行下面操作安装数据库任务已经完成下载并安装数据库依次执行如下命令会自行安装所需要的依赖启动数据库查看数据库运行状态如上就成功启动了查看数据库初始密码这一步大家记好笔记很多细节的地方不注意操作就会出现很多问题哦记录下你的初始密码这个后面的所有符号包括大小写都是密码登录数据库输入数据库的初始密码环境下输入密码是不可见的因此保证好大小写和符号输入不出错即可错误就重复上述操作即可此时在数据库操作界面了执行命令修改数据库的初始密码密码必须同时包含大小写英文字母数字和特殊符号中的三类字符错误示范注意每条完整的命令结尾都有一个半角分号如果多行命令中间没有分号分隔这些命令将不会执行直至遇到一个分号如下就成功了如果没成功就重复以上的操作创建一个你的博客数据库显示你创建的数据库如上就操作成功了退出数据库第四步安装环境是一种通用的服务器端脚本语言用于开发动态网页和应用程序下载环境执行命令更新源源是指更新服务器上的存储库通常是用于安装和管理软件包的存储库是一个流行的第三方存储库提供了最新版本的以及相关的扩展和工具使系统管理员和开发人员能够轻松地升级或安装和其它相关的软件包安装以及相关的库显示或者直接进入下一行命令输入都代表操作成功如有问题重复操作即可创建测试页面重新启动服务这个时候后端就已经开始运行了现在通过你的公网查看是否启动这样这就成功启动了第五步任务已经完成安装是什么是一款免费开源的内容管理系统目前已经成为全球使用最多的建站程序根据统计截至年月在全球的所有网站中占有的市场份额请注意是全球所有网站意味着每个网站中就有个网站是使用搭建的在使用构建的所有网站中占有的市场份额并且它的市场占有率一直在持续增长始于年最开始仅为一款简单的博客系统现在已发展成为具有数万款插件小工具和主题功能完整的系统它是根据开源协议通用公共许可证或更高版本进行授权的运行环境需要及数据库下载压缩包将压缩包解压到目录下调整目录的所属用户和组简单来讲就是赋予这个目录一个权限修改目录权限将配置文件重命名为修改配置文件修改配置中的数据库名称我们前面例子为为之前步骤中创建的数据库名称本示例为修改配置中的数据库名称我们前面例子为为数据库的用户名本示例为修改数据库的登陆密码我们前面的自己设置的密码前面例子为为数据库的登录密码本示例为这些都是之前设定的查看是否配置正确找到行往下看是否配置正确重启服务任务完成第六步网站配置登陆你的网站后台管理系统在打开浏览器并访问你的公网设置您的站点标题用户名密码和电子邮箱地址然后单击安装完成的初始化点击创立你的网站就搭建成功了接下来你可以好好研究你的网站了第七步任务完成目前网站的访问采用的公网可以自己注册域名后解析备案用作网站的域名然后网站现在不太好看需要自己去构建自己的网站或者采用别人已经编辑的主题进行配置即可后言网站已经搭建好了但是后期还是会遇到各种各样的小问题阅读官方文档和使用搜索引擎是解决问题的最好方式网站并没有你期待的样子接下来这是留你发挥的时候到了你的网站你可以做很多事情什么用途你可以预想一下个人博客网站那肯定不错那么你就要坚持的输出你的内容各行各业的技术分享都可以发表情侣小窝也是不错的选择一个小小的空间存放两个人的回忆亦或者做一个自己的电子书库做一个资源集合网站做一个自己的音乐网站做一个企业门户就此这就是留给你后续发挥的空间因为你才打开的大门试着继续了解更多么请私信或关注我吧作者水平有限如有错误欢迎指正',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-06 18:47:56',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/" title="csdn博客"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="csdn博客"/><span class="back-menu-item-text">csdn博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="http://47.110.229.183/wordpress/" title="另一个个人博客"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="另一个个人博客"/><span class="back-menu-item-text">另一个个人博客</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Lovewold少个r</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png"/></a><div class="post-qr-code-desc">微信</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-11-06T10:47:56.250Z" title="发表于 2023-11-06 18:47:56">2023-11-06</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-11-06T10:47:56.250Z" title="更新于 2023-11-06 18:47:56">2023-11-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/default_cover.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://www.lovewold.top/2023/11/06/0%E5%9F%BA%E7%A1%80%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"><header><h1 id="CrawlerTitle" itemprop="name headline">无题</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">lovewold少个r</span><time itemprop="dateCreated datePublished" datetime="2023-11-06T10:47:56.250Z" title="发表于 2023-11-06 18:47:56">2023-11-06</time><time itemprop="dateCreated datePublished" datetime="2023-11-06T10:47:56.250Z" title="更新于 2023-11-06 18:47:56">2023-11-06</time></header><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/7a130cb85cbd4ba9acddd4e6e06b9d3c.gif" alt="img"></p>
+<blockquote>
+<h2 id="作者主页"><a href="#作者主页" class="headerlink" title="作者主页"></a><strong>作者主页</strong></h2><p>📚<a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_?spm=1000.2115.3001.5343">lovewold少个r博客主页</a></p>
+<p>  ⚠️<strong>本文重点</strong>：<strong>0基础2小时搭建个人网站</strong></p>
+<p>👉**<em>*【C-C++入门系列专栏】*<em>：</em></em><a target="_blank" rel="noopener" href="http://t.csdnimg.cn/vPsPR">博客文章专栏传送门</a></p>
+<p>😄**<em>*每日一言*<em>：宁静是一片强大而治愈的神奇海洋！</em></em></p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/09dedf485a18435d83b9758fc0bdbeec.gif" alt="img"></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#%E5%89%8D%E8%A8%80">前言</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t0">第一步</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t1">环境配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t2">服务器配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t3">第二步</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t4">使用Linux服务器</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t5">远程连接服务器</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t6">第三步(任务已经完成30%)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t7">开始环境依赖下载运行</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t8">安装Apache</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t9">安装MySQL数据库（任务已经完成50%）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t10">第四步</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t11">安装PHP环境</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t12">下载环境</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t13">第五步（任务已经完成80%）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t14">安装wordpress</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t15">wordpress是什么</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t16">下载WordPress压缩包</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t17">修改wp-config.php配置文件</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t18">重启Apache服务（任务完成90%）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t19">第六步</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t20">网站配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t21">第七步（任务完成99%）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/article/details/134228966#t22">总结</a></p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    对于很多小伙伴来讲，都希望有一个自己的个人网站，记录自己的生活亦或者创建自己的个人博客网站。自己有一个网站能访问这本身就是一件特别酷的事情，而本章我们会对与我们这个小项目的技术栈做一个大致的描述，主要讲述搭建方法和解决一些常见的困难。</p>
+<p>​    我们采用的计算方案是基于阿里云云服务器和linux系统下的快速部署。对于一些专业性的描述大家有选择的观看，不需要涉及很多困难操作，只需要跟着一步步来就可以完成个人网站的搭建了。阿里云也具有官方文档，但是我会涉及一些零基础的知识解释，大家一步步跟着来吧。</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE&spm=1001.2101.3001.7020">环境配置</a></h3><h4 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE&spm=1001.2101.3001.7020">服务器配置</a></h4><p>​    要搭建个人的博客网站就得先有一个云端的服务器而非本端的。我们可以通过公网ip的地址就能访问到我们的网站。</p>
+<p>​    云服务器ECS（Elastic Compute Service）是阿里云提供的性能卓越、稳定可靠、弹性扩展的IaaS（Infrastructure as a Service）级别云计算服务。云服务器ECS主要包含实例、镜像、块存储、快照、安全组、网络等功能组件。</p>
+<p><strong>进入阿里云官网（登陆+认证）:</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/d5ddcca316444291b51dc274bb66c2b2.png" alt="img"></p>
+<p><strong>领取阿里云服务器</strong></p>
+<p>这里最近阿里云活动，可以免费领取三个月的配额，对于熟悉建站流程来讲已经完全够用了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/9bc60db1025447cd934cdfb629913749.png" alt="img"></p>
+<p><strong>选择配置创建实例</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/0e727486ba16470d8bf79b5a85dc6be6.png" alt="img"></p>
+<p>​    本教程以Alibaba Cloud Linux 3.2104 64位操作系统为例，如果您购买的ECS服务器使用了其他版本的操作系统，操作可能和本教程略有差异。不推荐直接使用云市场操作系统自带wordpress的，后期产生bug不好处理。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/be05fa2e199f45b7aac9c7ca687665b5.png" alt="img"></p>
+<p><strong>重置实例密码</strong></p>
+<p>账号就root密码为大小写、数字和字符中的三种。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/dbf224384c15464a8c909e7aec7e264e.png" alt="img"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/7f55298665b84043ab6166d8373da834.png" alt="img"></p>
+<p><strong>重置密码并重新启动</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/d85c854979be48c5b81abdb56882d478.png" alt="img"></p>
+<p><strong>配置安全组规则</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/b1c025df55b54e1f8f641350d0daddb6.png" alt="img"></p>
+<p>​    单击试用实例的ID，选择<strong>安全组</strong>页签，单击安全组<strong>操作</strong>列的<strong>配置规则</strong>，在入方向添加需要放行的端口。本教程中，在安全组入方向放行SSH默认22端口、Apache默认80端口和MySQL默认3306端口。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/01e50311bc08477aa44f731605a17bbd.png" alt="img"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/8494ffa1fa034172ae131d699f706e75.png" alt="img"></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><h3 id="使用Linux服务器"><a href="#使用Linux服务器" class="headerlink" title="使用Linux服务器"></a>使用Linux服务器</h3><h4 id="远程连接服务器"><a href="#远程连接服务器" class="headerlink" title="远程连接服务器"></a>远程连接服务器</h4><p><em>*<em>*</em>*密码为重置实例你创建的密码，****通过Workbench远程连接,root+自定义密码登陆即可</em>*</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/e90a29ffe98a418897d6050a38986307.png" alt="img"></p>
+<p><strong>进行远程操作</strong></p>
+<p>服务器是linux系统的服务器，因此我们这里学习一下如下指令</p>
+<p>展示文件</p>
+<p>展示所有文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -a</span><br></pre></td></tr></table></figure>
+
+<p>展示非隐藏文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
+
+<p>清理屏幕</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br></pre></td></tr></table></figure>
+
+<p>进入目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 目录名或者目录路径</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/c9b7a50da4f14018b7de66796fb1c072.png" alt="img"></p>
+<h3 id="第三步-任务已经完成30"><a href="#第三步-任务已经完成30" class="headerlink" title="第三步(任务已经完成30%)"></a>第三步(任务已经完成30%)</h3><h3 id="开始环境依赖下载运行"><a href="#开始环境依赖下载运行" class="headerlink" title="开始环境依赖下载运行"></a>开始环境依赖下载运行</h3><h4 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h4><blockquote>
+<p>Apache（全名为Apache HTTP Server）是一个流行的开源Web服务器软件，它用于在服务器上托管和提供Web页面和Web应用程序。Apache是由Apache软件基金会（Apache Software Foundation）开发和维护的，被广泛用于Internet上的网站和Web应用的部署。</p>
+</blockquote>
+<p>执行命令安装Apache及其扩展包。如果回显信息显示<code>Complete!</code>，则表示Apache安装成功。</p>
+<p>（sudo执行管理者权限，yum是linux系统下的软件管理软件。通过如下操作实现安装）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install httpd httpd-manual httpd-devel mod_ssl mod_perl php-mysqli</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/dee705c3041b48659ab7b492fad33e9e.png" alt="img"></p>
+<p><strong>启动Apache并设置开机自启动</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start httpd</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> httpd</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看Apache运行状态</strong></p>
+<p>如果回显信息显示active (running)时，表示Apache已启动。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status httpd</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/94b2c4e9f9b547ef8e7448b3093a225d.png" alt="img"></p>
+<p>这个时候在本地电脑浏览器地址栏中输入****<code>http://你的公网ip</code>****，测试Apache服务是否安装成功。如果显示如图所示的测试页面，表示Apache服务已安装成功。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/ead0fe69af334c6daa808c97207d75aa.png" alt="img"></p>
+<p>ECS服务器的公网IP可以从ECS实例页面获取，如下就代表成功了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/253ccd11931f41d6a4a28333d4bb8783.png" alt="img"></p>
+<p>命令行点击q后继续执行下面操作。</p>
+<h4 id="安装MySQL数据库（任务已经完成50-）"><a href="#安装MySQL数据库（任务已经完成50-）" class="headerlink" title="安装MySQL数据库（任务已经完成50%）"></a>安装MySQL数据库（任务已经完成50%）</h4><p><strong>下载并安装MySQL数据库</strong></p>
+<p>依次执行如下命令，会自行安装所需要的依赖。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">sudo yum install -y mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">sudo yum install -y mysql-community-server --nogpgcheck</span><br></pre></td></tr></table></figure>
+
+<p><strong>启动MySQL数据库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看数据库运行状态</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/4299a3a74d7f4bf99ae96e4ebe2b8e1d.png" alt="img"></p>
+<p>如上active(running)就成功启动了。</p>
+<p><em><strong>*查看数据库初始密码*</strong></em></p>
+<p>这一步大家记好笔记，很多细节的地方不注意操作就会出现很多问题哦！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep <span class="string">&quot;password&quot;</span> /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/a6ddcb70bc1a4c0c8ae10bc1117e2583.png" alt="img"></p>
+<p>记录下你的初始密码，这个后面的所有符号包括大小写都是密码。</p>
+<p>登录MySQL数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>输入MySQL数据库的初始密码。Linux环境下输入密码是不可见的，因此保证好大小写和符号输入不出错即可。错误就重复上述操作即可。</p>
+<p><strong>此时在数据库操作界面了</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/4b581c6209df41feb47d47655e8c72e6.png" alt="img"></p>
+<p>****执行命令修改MySQL数据库的初始密码****。</p>
+<ul>
+<li>密码必须同时包含大小写英文字母、数字和特殊符号中的三类字符。</li>
+</ul>
+<p> 错误示范<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/ea99e7d7dede4d5bbf1fb5851391c5c9.png" alt="img"></p>
+<ul>
+<li>注意每条完整的SQL命令结尾都有一个半角分号（;），如果多行命令中间没有分号分隔，这些命令将不会执行，直至遇到一个分号。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/eb30d2c08a674bb2887e38777df05eb3.png" alt="img"></p>
+<p>如下就成功了，如果没成功就重复以上的操作</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/670c28604e254c2695f0de42303a13f6.png" alt="img"></p>
+<p><strong>创建一个你的博客数据库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database wordpress;</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示你创建的数据库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/cc15c7912644450199329c409f177063.png" alt="img"></p>
+<p>如上就操作成功了。</p>
+<p><strong>退出数据库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><h3 id="安装PHP环境"><a href="#安装PHP环境" class="headerlink" title="安装PHP环境"></a>安装PHP环境</h3><blockquote>
+<p>​    PHP（Hypertext Preprocessor）是一种通用的服务器端脚本语言，用于开发动态网页和Web应用程序。</p>
+</blockquote>
+<h4 id="下载环境"><a href="#下载环境" class="headerlink" title="下载环境"></a>下载环境</h4><p><strong>执行命令更新remi源</strong></p>
+<blockquote>
+<p>Remi源是指更新服务器上的Remi存储库（repository），通常是用于安装和管理PHP软件包的存储库。Remi是一个流行的第三方存储库，提供了最新版本的PHP以及相关的扩展和工具，使系统管理员和开发人员能够轻松地升级或安装PHP和其它PHP相关的软件包</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -ivh https://rpms.remirepo.net/enterprise/remi-release-8.rpm --nodeps</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/3cacde1d70cb45d091d42f40fdad4792.png" alt="img"></p>
+<p><strong>安装PHP以及相关的库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf update -y dnf libdnf</span><br><span class="line">sudo sed -i <span class="string">&#x27;s/PLATFORM_ID=&quot;platform:al8&quot;/PLATFORM_ID=&quot;platform:el8&quot;/g&#x27;</span> /etc/os-release</span><br><span class="line">sudo yum -y module install php:remi-7.4</span><br><span class="line">sudo sed -i <span class="string">&#x27;s/PLATFORM_ID=&quot;platform:el8&quot;/PLATFORM_ID=&quot;platform:al8&quot;/g&#x27;</span> /etc/os-release</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/2a0a91234303492cb6758b5a8fe9fe39.png" alt="img"></p>
+<p>显示Complete！或者直接进入下一行命令输入都代表操作成功，如有问题重复操作即可</p>
+<p><strong>创建PHP测试页面</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;&lt;?php phpinfo(); ?&gt;&quot; &gt; /var/www/html/phpinfo.php&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>重新启动服务</strong> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<p>这个时候php后端就已经开始运行了，现在通过http:&#x2F;&#x2F;你的公网&#x2F;phpinfo.php查看是否启动。</p>
+<p>这样这就成功启动了 ！</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/c038e8240cee4bd583ff966c6bca9dd9.png" alt="img"></p>
+<h2 id="第五步（任务已经完成80-）"><a href="#第五步（任务已经完成80-）" class="headerlink" title="第五步（任务已经完成80%）"></a>第五步（任务已经完成80%）</h2><h3 id="安装wordpress"><a href="#安装wordpress" class="headerlink" title="安装wordpress"></a>安装wordpress</h3><h4 id="wordpress是什么"><a href="#wordpress是什么" class="headerlink" title="wordpress是什么"></a>wordpress是什么</h4><p>​    WordPress是一款免费开源的内容管理系统（CMS），目前已经成为全球使用最多的CMS建站程序。根据统计（截至2021年4月），在全球的所有网站中WordPress 占有41%的市场份额（请注意是全球所有网站），意味着每5个网站中就有2个网站是使用WordPress搭建的。在使用CMS构建的所有网站中WordPress占有64.7％的市场份额，并且它的市场占有率一直在持续增长。</p>
+<p>​    WordPress始于2003年，最开始仅为一款简单的博客系统，现在已发展成为具有数万款插件，小工具和主题功能完整的CMS系统。它是根据开源协议通用公共许可证（GPLv2或更高版本）进行授权。WordPress的运行环境需要PHP及MySQL数据库</p>
+<h4 id="下载WordPress压缩包"><a href="#下载WordPress压缩包" class="headerlink" title="下载WordPress压缩包"></a>下载WordPress压缩包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://cn.wordpress.org/latest-zh_CN.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/328ebfe233014125914c03ab33360666.png" alt="img"></p>
+<p>*<em>将WordPress压缩包解压到*</em><code>/var/www/html</code>*<em>目录下</em>*</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf latest-zh_CN.tar.gz -C /var/www/html</span><br></pre></td></tr></table></figure>
+
+<p><strong>调整wordpress目录的所属用户和组</strong></p>
+<p>简单来讲就是赋予这个目录一个权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chown</span> -R apache:apache /var/www/html/wordpress</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/1f671b58059b49e1b736fe3f651b96cd.png" alt="img"></p>
+<p>*<em>修改*</em><code>/www/html/wordpress</code>*<em>目录权限</em>*</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> -R 755 /var/www/html/wordpress</span><br></pre></td></tr></table></figure>
+
+<p><strong>将wp-config-sample.php配置文件重命名为wp-config.php。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改wp-config-php配置文件"><a href="#修改wp-config-php配置文件" class="headerlink" title="修改wp-config.php配置文件"></a>修改wp-config.php配置文件</h4><p>修改配置中的数据库名称，我们前面例子为wordpress</p>
+<p>database_name_here为之前步骤中创建的数据库名称，本示例为wordpress。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s/database_name_here/wordpress/&#x27;</span> /var/www/html/wordpress/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p>修改配置中的数据库名称，我们前面例子为root</p>
+<p>username_here为MySQL数据库的用户名，本示例为root。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s/username_here/root/&#x27;</span> /var/www/html/wordpress/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p>修改数据库的登陆密码，我们前面的自己设置的密码，前面例子为Li-new886</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s/password_here/NewPassW****/&#x27;</span> /var/www/html/wordpress/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p>password_here为MySQL数据库的登录密码，本示例为NewPassW****。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/688e9b75b3cb406fb924f4caa6d0ef72.png" alt="img"></p>
+<p>这些都是之前设定的。</p>
+<p><strong>查看是否配置正确</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> -n /var/www/html/wordpress/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/893deb880b8e45fcabe42fa83218006c.png" alt="img"></p>
+<p>找到22行往下看是否配置正确。</p>
+<h4 id="重启Apache服务（任务完成90-）"><a href="#重启Apache服务（任务完成90-）" class="headerlink" title="重启Apache服务（任务完成90%）"></a>重启Apache服务（任务完成90%）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<h2 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h2><h3 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h3><p><strong>登陆你的网站后台管理系统</strong></p>
+<p>1.在打开浏览器并访问<code>http://你的公网ip/wordpress/wp-admin</code></p>
+<p>2.设置您的<strong>站点标题</strong>、<strong>用户名</strong>、<strong>密码</strong>和<strong>电子邮箱地址</strong>，然后单击<strong>安装WordPress，</strong>完成WordPress的初始化。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/2c91ccb717484a03ae1d15fe1bf0eb84.png" alt="img"></p>
+<p>3.点击创立你的网站就搭建成功了</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/cb6a1ba0622349459baaab29f80f8daf.png" alt="img"></p>
+<p>接下来你可以好好研究你的网站了。</p>
+<h2 id="第七步（任务完成99-）"><a href="#第七步（任务完成99-）" class="headerlink" title="第七步（任务完成99%）"></a>第七步（任务完成99%）</h2><p>目前网站的访问采用的公网，可以自己注册域名后解析备案，用作网站的域名。</p>
+<p>然后网站现在不太好看，需要自己去构建自己的网站或者采用别人已经编辑的主题进行配置即可。<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/0b54aac4ec44496fb228112adb661528.png" alt="img"></p>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>​    网站已经搭建好了，但是后期还是会遇到各种各样的小问题，阅读官方文档和使用搜索引擎是解决问题的最好方式。</p>
+<p>​    网站并没有你期待的样子，接下来这1%是留你发挥的时候到了，你的网站你可以做很多事情，什么用途你可以预想一下。个人博客网站，那肯定不错，那么你就要坚持的输出你的内容，各行各业的技术分享都可以发表。情侣小窝也是不错的选择，一个小小的空间存放两个人的回忆，亦或者做一个自己的电子书库，做一个资源集合网站，做一个自己的音乐网站，做一个企业门户······</p>
+<p>​    就此这1%就是留给你后续发挥的空间，因为你才打开wordprss的大门，试着继续了解更多么，请私信或关注我吧！！！</p>
+<hr>
+<p>  <em>作者水平有限，如有错误欢迎指正！</em></p>
+<hr>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdnimg.cn/9b1eda4aca3b477491f9b5366a7d2204.gif" alt="img"></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pic.imgdb.cn/item/65487e87c458853aef15cf69.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pic.imgdb.cn/item/65487e87c458853aef15cf69.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">lovewold少个r</div><div class="post-copyright__author_desc">生活明朗，万物可爱</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.lovewold.top/2023/11/06/0%E5%9F%BA%E7%A1%80%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.lovewold.top/2023/11/06/0基础两小时搭建个人网站/')">Lovewold少个r</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pic.imgdb.cn/item/65468ed2c458853aefd669fb.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.lovewold.top/2023/11/06/0%E5%9F%BA%E7%A1%80%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Lovewold少个r&amp;url=https://www.lovewold.top/2023/11/06/0%E5%9F%BA%E7%A1%80%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&amp;pic=/img/default_cover.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.lovewold.top" target="_blank">Lovewold少个r</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/img/default_cover.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/11/02/grilfrind/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E4%B8%BB%E9%A1%B5"><span class="toc-number">1.</span> <span class="toc-text">作者主页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">3.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="toc-number">4.</span> <span class="toc-text">第一步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">4.1.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">4.1.1.</span> <span class="toc-text">服务器配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="toc-number">4.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.3.</span> <span class="toc-text">使用Linux服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.3.1.</span> <span class="toc-text">远程连接服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E4%BB%BB%E5%8A%A1%E5%B7%B2%E7%BB%8F%E5%AE%8C%E6%88%9030"><span class="toc-number">4.4.</span> <span class="toc-text">第三步(任务已经完成30%)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E7%8E%AF%E5%A2%83%E4%BE%9D%E8%B5%96%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C"><span class="toc-number">4.5.</span> <span class="toc-text">开始环境依赖下载运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Apache"><span class="toc-number">4.5.1.</span> <span class="toc-text">安装Apache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E4%BB%BB%E5%8A%A1%E5%B7%B2%E7%BB%8F%E5%AE%8C%E6%88%9050-%EF%BC%89"><span class="toc-number">4.5.2.</span> <span class="toc-text">安装MySQL数据库（任务已经完成50%）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">第四步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85PHP%E7%8E%AF%E5%A2%83"><span class="toc-number">5.1.</span> <span class="toc-text">安装PHP环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%8E%AF%E5%A2%83"><span class="toc-number">5.1.1.</span> <span class="toc-text">下载环境</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%88%E4%BB%BB%E5%8A%A1%E5%B7%B2%E7%BB%8F%E5%AE%8C%E6%88%9080-%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">第五步（任务已经完成80%）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85wordpress"><span class="toc-number">6.1.</span> <span class="toc-text">安装wordpress</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#wordpress%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">6.1.1.</span> <span class="toc-text">wordpress是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDWordPress%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="toc-number">6.1.2.</span> <span class="toc-text">下载WordPress压缩包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9wp-config-php%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">6.1.3.</span> <span class="toc-text">修改wp-config.php配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%90%AFApache%E6%9C%8D%E5%8A%A1%EF%BC%88%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%9090-%EF%BC%89"><span class="toc-number">6.1.4.</span> <span class="toc-text">重启Apache服务（任务完成90%）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5"><span class="toc-number">7.</span> <span class="toc-text">第六步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE"><span class="toc-number">7.1.</span> <span class="toc-text">网站配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E6%AD%A5%EF%BC%88%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%9099-%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">第七步（任务完成99%）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%A8%80"><span class="toc-number">9.</span> <span class="toc-text">后言</span></a></li></ol></div></div></div></div></div></main><footer id="footer" style="/img/default_cover.jpg"><div id="footer-wrap"><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2023 By <a class="footer-bar-link" href="/" title="lovewold少个r" target="_blank">lovewold少个r</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.0.15/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/function%20link()%20%7B%20%5Bnative%20code%5D%20%7D"></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.csdn.net/lovewold_/" title="csdn博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="csdn博客"/><span class="back-menu-item-text">csdn博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="http://47.110.229.183/wordpress/" title="另一个个人博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="另一个个人博客"/><span class="back-menu-item-text">另一个个人博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="anzhiyufont anzhiyu-icon-comment-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("11/03/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2023 By 安知鱼 V1.6.8",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 lovewold少个r 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initWaline = () => {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://0hthizoy.api.lncldglobal.com',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (typeof Waline === 'object') initWaline()
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.css')
+      await getScript('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.js')
+      initWaline()
+    }
+  }
+
+  if ('Waline' === 'Waline' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script src="//code.tidio.co/v75ybd7elno2af5f02ot2zjcock5utig.js" async="async"></script><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = true
+
+  if (isChatBtn) {
+    let isShow = false
+    const close = () => {
+      window.tidioChatApi.hide()
+      isShow = false
+    }
+    
+    const open = () => {
+      window.tidioChatApi.open()
+      window.tidioChatApi.show()
+      isShow = true
+    }
+
+    const onTidioChatApiReady = () => {
+      window.tidioChatApi.hide()
+      window.tidioChatApi.on("close", close)
+    }
+    if (window.tidioChatApi) {
+      window.tidioChatApi.on("ready", onTidioChatApiReady)
+    } else {
+      document.addEventListener("tidioChat-ready", onTidioChatApiReady)
+    }
+
+    window.chatBtnFn = () => {
+      if (!window.tidioChatApi) return
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        window.tidioChatApi && window.tidioChatApi.hide()
+      },
+      show: () => {
+        window.tidioChatApi && window.tidioChatApi.show()
+      }
+    }
+  }
+})()</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
